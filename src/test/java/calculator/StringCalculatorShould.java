@@ -2,6 +2,7 @@ package calculator;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
@@ -16,6 +17,10 @@ class StringCalculatorShould {
         assertEquals(1, StringCalculator.add("1"));
     }
     
+    @Test
+	public void testTwoNumbers(){
+		assertEquals(3, StringCalculator.add("1,2"));
+	}
     
     
     
