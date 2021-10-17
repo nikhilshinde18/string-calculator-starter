@@ -29,7 +29,12 @@ class StringCalculatorShould {
     }
     
     
-    
+
+    @Test
+    public void testNewLine(){
+    	assertEquals(6, StringCalculator.add("1\n2,3"));
+    }
+
     
     
     
