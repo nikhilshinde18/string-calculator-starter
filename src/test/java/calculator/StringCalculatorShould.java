@@ -2,6 +2,7 @@ package calculator;
 
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -52,7 +53,15 @@ class StringCalculatorShould {
 		}
     }
 
-    
+    @Test
+    public void testOverThousand(){
+    	assertEquals(2, StringCalculator.add("1000,2"));
+    }
+
+    @Test
+    public void testOtherDelimiter(){
+    	assertEquals(3, StringCalculator.add("//;\n1;2"));
+    }
     
     
     
