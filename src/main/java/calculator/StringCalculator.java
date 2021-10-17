@@ -18,8 +18,8 @@ class StringCalculator {
 		}
 	}
 
-	private static int toInt(String number){
-		return Integer.parseInt(number);
+	private static int toInt(String num){
+		return Integer.parseInt(num);
 	}
 
 	private static String[] splitNumbers(String numbers, String divider){
@@ -30,15 +30,15 @@ class StringCalculator {
  	    int total = 0;
  	    String negString = "";
 
-        for(String number : numbers){
-        	if(toInt(number) < 0){
+        for(String num : numbers){
+        	if(toInt(num) < 0){
         		if(negString.equals(""))
-        			negString = number;
+        			negString = num;
         		else
-        			negString += ("," + number);
+        			negString += ("," + num);
         	}
-        	if(toInt(number) < 1000)
-		    	total += toInt(number);
+        	if(toInt(num) < 1000)
+		    	total += toInt(num);
 		}
 
 		if(!negString.equals("")){
